@@ -44,7 +44,9 @@
       <HintPath>..\..\SSvn-1.7002.1998\SharpSvn\SharpSvn.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +75,7 @@
     <Compile Include="Link.Designer.cs">
       <DependentUpon>Link.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyService.cs" />
     <Compile Include="MySubversion.cs" />
     <Compile Include="MyVisual.cs" />
     <Compile Include="Program.cs" />
@@ -113,6 +116,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

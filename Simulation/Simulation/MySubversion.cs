@@ -10,26 +10,29 @@ namespace Simulation
 {
     class MySubversion
     {
-        String _localDest;
 
-        public MySubversion(String localDest)
+        public MySubversion()
         {
-
-            _localDest = localDest;
 
         }
 
-        private void addSubversion(String dest, String sensors)
+        public void addSubversion(String dest, String commitmsg, String content)
         {
-            String strLine="Test";
-
-            SavetoFile(dest, strLine);
+            SavetoFile(dest, content);
+            SavetoSVN(dest, commitmsg);
         }
 
+        private void SavetoFile(String dest, String strLine)
+        {
+            FileStream sensor = new FileStream(dest, FileMode.Append);
+            using (StreamWriter sw = new StreamWriter(sensor))
+            {
+                sw.WriteLine(strLine);
+                sw.Close();
+            }
+        }
 
-
-
-        private void SavetoSVN(String commitmsg)
+        private void SavetoSVN(String dest, String commitmsg)
         {
 
             //This object allows us to provide options for 'svn commit'
@@ -46,7 +49,7 @@ namespace Simulation
                 try
                 {
                     //This method is the equivalent of 'svn commit'
-                    client.Commit(_localDest, args, out result);
+                    client.Commit(dest, args, out result);
                     if (result != null)
                         Console.Write("Erfolgreich");
                     else
@@ -57,23 +60,6 @@ namespace Simulation
                     Console.Write("Error: " + se.SvnErrorCode + Environment.NewLine, "svn commit error");
                 }
             }
-        }
-
-        private void SavetoFile(String dest, String strLine)
-        {
-            FileStream sensor = new FileStream(dest, FileMode.Append);
-            using (StreamWriter sw = new StreamWriter(sensor))
-            {
-                sw.WriteLine(strLine);
-                sw.Close();
-            }
-
-        }
-
-        public void saveSubversion(String data, String commitmsg)
-        {
-            SavetoFile(data);
-            SavetoSVN(commitmsg);
         }
     }
 }

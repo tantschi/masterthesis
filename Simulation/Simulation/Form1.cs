@@ -82,12 +82,22 @@ namespace Simulation
         {
             foreach (ListViewItem i in lvdata.Items)
             {
+           
+                if (i.SubItems[1].Text == "Construct")
+                {
+                    MyService ms = new MyService();
+                    ms.stopService("Simulation_" + i.SubItems[0].Text);
+
+                }
+
                 if (i.Checked == true)
                 {
                     i.Remove();
                 }
+
             }
         }
+
 
 
 

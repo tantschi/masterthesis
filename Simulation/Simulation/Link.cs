@@ -49,7 +49,14 @@ namespace Simulation
             item.SubItems.Add("Construct");
             item.SubItems.Add(tbdest.Text);
             ((Form1)startingForm).lvdata.Items.Add(item);
-            addSubversion(tbdest.Text, tblink.Text);
+
+
+            MyService ms = new MyService();
+            ms.installService("Simulation_" + tbadd.Text);
+            //ms.startService();
+
+            MySubversion svn = new MySubversion();
+            svn.addSubversion(tbdest.Text, tblink.Text, "content");
             this.Close();
         }
 
@@ -60,7 +67,6 @@ namespace Simulation
                 tbdest.Text = ofdselector.FileName;
             }
         }
-
 
     }
 }

@@ -109,6 +109,8 @@
             this.tbdest.Name = "tbdest";
             this.tbdest.Size = new System.Drawing.Size(274, 22);
             this.tbdest.TabIndex = 6;
+            this.tbdest.Text = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\codegoogle_thesis_svn\\newc" +
+    "onst.txt";
             // 
             // btbrowse
             // 
