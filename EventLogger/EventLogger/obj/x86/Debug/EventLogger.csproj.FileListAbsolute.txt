@@ -1,0 +1,6 @@
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\EventLogger\EventLogger\bin\Debug\EventLogger.exe
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\EventLogger\EventLogger\bin\Debug\EventLogger.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\EventLogger\EventLogger\obj\x86\Debug\EventLogger.ProjectInstaller.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\EventLogger\EventLogger\obj\x86\Debug\EventLogger.csproj.GenerateResource.Cache
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\EventLogger\EventLogger\obj\x86\Debug\EventLogger.exe
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\EventLogger\EventLogger\obj\x86\Debug\EventLogger.pdb
