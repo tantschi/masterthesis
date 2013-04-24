@@ -55,6 +55,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpsvn = new System.Windows.Forms.TabPage();
             this.tpgit = new System.Windows.Forms.TabPage();
+            this.tblocalrepogit = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btstartgit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,9 +65,6 @@
             this.tbcommitgit = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.tblocalrepogit = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpsvn.SuspendLayout();
@@ -209,7 +209,8 @@
             this.tblocaldest.Name = "tblocaldest";
             this.tblocaldest.Size = new System.Drawing.Size(274, 22);
             this.tblocaldest.TabIndex = 15;
-            this.tblocaldest.Text = "D:\\04_Semester\\Masterarbeit\\SVN\\Checkout_SVNTest_Repo\\feuchtigkeit.txt";
+            this.tblocaldest.Text = "D:\\04_semester\\masterarbeit_hawaii_stuff\\praxis\\github\\codegoogle_thesis_svn\\humi" +
+    "dity.txt";
             // 
             // label2
             // 
@@ -278,7 +279,7 @@
             // 
             this.tabControl1.Controls.Add(this.tpsvn);
             this.tabControl1.Controls.Add(this.tpgit);
-            this.tabControl1.Location = new System.Drawing.Point(29, 164);
+            this.tabControl1.Location = new System.Drawing.Point(29, 167);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(519, 170);
@@ -321,6 +322,32 @@
             this.tpgit.Text = "Git";
             this.tpgit.UseVisualStyleBackColor = true;
             // 
+            // tblocalrepogit
+            // 
+            this.tblocalrepogit.Location = new System.Drawing.Point(133, 13);
+            this.tblocalrepogit.Name = "tblocalrepogit";
+            this.tblocalrepogit.Size = new System.Drawing.Size(274, 22);
+            this.tblocalrepogit.TabIndex = 25;
+            this.tblocalrepogit.Text = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\thesis_git";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 17);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Local Repository";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(413, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 23);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "Browse ...";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(267, 101);
@@ -356,7 +383,7 @@
             this.tblocaldestgit.Name = "tblocaldestgit";
             this.tblocaldestgit.Size = new System.Drawing.Size(274, 22);
             this.tblocaldestgit.TabIndex = 20;
-            this.tblocaldestgit.Text = "D:\\04_semester\\masterarbeit_hawaii_stuff\\Praxis\\GIT\\GitTestJava\\neu.txt";
+            this.tblocaldestgit.Text = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\thesis_git\\humidity.txt";
             // 
             // tbcommitgit
             // 
@@ -383,32 +410,6 @@
             this.button2.TabIndex = 21;
             this.button2.Text = "Browse ...";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // tblocalrepogit
-            // 
-            this.tblocalrepogit.Location = new System.Drawing.Point(133, 13);
-            this.tblocalrepogit.Name = "tblocalrepogit";
-            this.tblocalrepogit.Size = new System.Drawing.Size(274, 22);
-            this.tblocalrepogit.TabIndex = 25;
-            this.tblocalrepogit.Text = "D:\\04_semester\\masterarbeit_hawaii_stuff\\Praxis\\GIT\\GitTestJava";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 17);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Local Repository";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(413, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 23);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Browse ...";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // freadcsv
             // 

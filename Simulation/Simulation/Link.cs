@@ -52,11 +52,9 @@ namespace Simulation
 
 
             MyService ms = new MyService();
-            ms.installService("Simulation_" + tbadd.Text);
+            ms.installService("Simulation_" + tbadd.Text, tbdest.Text, tblink.Text);
             //ms.startService();
 
-            MySubversion svn = new MySubversion();
-            svn.addSubversion(tbdest.Text, tblink.Text, "content");
             this.Close();
         }
 
