@@ -52,8 +52,9 @@ namespace Simulation
 
 
             MyService ms = new MyService();
-            ms.installService("Simulation_" + tbadd.Text, tbdest.Text, tblink.Text);
-            //ms.startService();
+            String servicename = "Simulation_" + tbadd.Text;
+            ms.installService(servicename, tbdest.Text, tblink.Text);
+            ms.startService(servicename);
 
             this.Close();
         }
