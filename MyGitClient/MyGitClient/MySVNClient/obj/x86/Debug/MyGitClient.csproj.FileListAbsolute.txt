@@ -1,0 +1,16 @@
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\obj\x86\Debug\MySVNClient.exe
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\obj\x86\Debug\MySVNClient.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\obj\x86\Debug\MySVNClient.Properties.Resources.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\obj\x86\Debug\MySVNClient.SvnClient.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\obj\x86\Debug\MyGitClient.csproj.GenerateResource.Cache
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\MySVNClient.exe
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\MySVNClient.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\GitSharp.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\GitSharp.Core.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\Tamir.SharpSSH.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\Winterdom.IO.FileMap.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\GitSharp.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\GitSharp.xml
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\GitSharp.Core.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\MyGitClient\MyGitClient\MySVNClient\bin\Debug\GitSharp.Core.xml

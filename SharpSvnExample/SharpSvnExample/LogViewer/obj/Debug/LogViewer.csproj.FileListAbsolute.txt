@@ -1,0 +1,17 @@
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvnExample.exe
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvnExample.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn.UI.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn.xml
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn.UI.pdb
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn.UI.xml
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn-DB44-20-Win32.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpSvn-SASL21-22-Win32.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\bin\Debug\SharpPlink-Win32.svnExe
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\obj\Debug\LogViewer.csprojResolveAssemblyReference.cache
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\obj\Debug\SharpSvnExample.LogViewerDialog.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\obj\Debug\SharpSvnExample.Properties.Resources.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\obj\Debug\LogViewer.csproj.GenerateResource.Cache
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\obj\Debug\SharpSvnExample.exe
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\SharpSvnExample\SharpSvnExample\LogViewer\obj\Debug\SharpSvnExample.pdb
