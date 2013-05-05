@@ -38,11 +38,14 @@
             this.tbdest = new System.Windows.Forms.TextBox();
             this.btbrowse = new System.Windows.Forms.Button();
             this.ofdselector = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbseconds = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btadd
             // 
-            this.btadd.Location = new System.Drawing.Point(193, 174);
+            this.btadd.Location = new System.Drawing.Point(193, 188);
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(75, 23);
             this.btadd.TabIndex = 0;
@@ -78,7 +81,7 @@
             // btcancel
             // 
             this.btcancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btcancel.Location = new System.Drawing.Point(295, 174);
+            this.btcancel.Location = new System.Drawing.Point(295, 188);
             this.btcancel.Name = "btcancel";
             this.btcancel.Size = new System.Drawing.Size(75, 23);
             this.btcancel.TabIndex = 4;
@@ -127,12 +130,42 @@
             this.ofdselector.FileName = "openFileDialog1";
             this.ofdselector.InitialDirectory = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\codegoogle_thesis_svn";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Interval";
+            // 
+            // tbseconds
+            // 
+            this.tbseconds.Location = new System.Drawing.Point(140, 152);
+            this.tbseconds.Name = "tbseconds";
+            this.tbseconds.Size = new System.Drawing.Size(66, 22);
+            this.tbseconds.TabIndex = 18;
+            this.tbseconds.Text = "60";
+            this.tbseconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(212, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Seconds";
+            // 
             // Link
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btcancel;
-            this.ClientSize = new System.Drawing.Size(565, 237);
+            this.ClientSize = new System.Drawing.Size(609, 280);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbseconds);
             this.Controls.Add(this.btbrowse);
             this.Controls.Add(this.lbdest);
             this.Controls.Add(this.tbdest);
@@ -161,5 +194,8 @@
         private System.Windows.Forms.TextBox tbdest;
         private System.Windows.Forms.Button btbrowse;
         private System.Windows.Forms.OpenFileDialog ofdselector;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbseconds;
+        private System.Windows.Forms.Label label2;
     }
 }

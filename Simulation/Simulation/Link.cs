@@ -22,12 +22,15 @@ namespace Simulation
 
             foreach (ListViewItem i in ((Form1)startingForm).lvdata.Items)
             {
+                // Link each construct with + (= standard setting)
                 if (i.Checked == true)
                 {
                     if (link == "")
                         link = i.Text;
                     else
                         link =  link + " + " + i.Text;
+
+                    i.Checked = false; // remove checked
                 }
             }
             tblink.Text = link;
@@ -38,11 +41,13 @@ namespace Simulation
 
         }
 
+        // add new link (= construct) to sensor system
         private void btadd_Click(object sender, EventArgs e)
         {
             if (tbdest.Text == "" || tbadd.Text == "" || tblink.Text == "")
                 MessageBox.Show("Please enter information in every field!");
             
+            // add new construct to sensor list
             ListViewItem item = new ListViewItem();
             item.Checked = false;
             item.Text = tbadd.Text;
@@ -50,15 +55,16 @@ namespace Simulation
             item.SubItems.Add(tbdest.Text);
             ((Form1)startingForm).lvdata.Items.Add(item);
 
-
+            // start windows service
             MyService ms = new MyService();
             String servicename = "Simulation_" + tbadd.Text;
-            ms.installService(servicename, tbdest.Text, tblink.Text);
+            ms.installService(servicename, tbdest.Text, tblink.Text, tbseconds.Text);
             ms.startService(servicename);
 
             this.Close();
         }
 
+        // chose SVN destination for sensor
         private void btbrowse_Click(object sender, EventArgs e)
         {
             if (ofdselector.ShowDialog() == DialogResult.OK)

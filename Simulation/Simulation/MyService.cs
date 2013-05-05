@@ -58,11 +58,12 @@ namespace Simulation
             }
         }
 
-        public void installService(String service, String destination, String commit)
+        public void installService(String service, String destination, String commit, String intervall)
         {
             SetConfigurationValue("ServiceName", service);
             SetConfigurationValue("Destination", destination);
             SetConfigurationValue("CommitMsg", commit);
+            SetConfigurationValue("Intervall", intervall);
 
             Process p = new Process();
             p.StartInfo.FileName = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\C#Workspace\\MetaConstructService\\MetaConstructService\\bin\\Debug\\Install.cmd";
