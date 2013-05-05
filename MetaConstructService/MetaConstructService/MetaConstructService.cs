@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace MetaConstructService
 {
-    public partial class EventLoggerService : ServiceBase
+    public partial class MetaConstructService : ServiceBase
     {
 
         #region Member fields
@@ -18,7 +18,7 @@ namespace MetaConstructService
         private MetaConstructApp _app = new MetaConstructApp();
         #endregion Member fields
 
-        public EventLoggerService()
+        public MetaConstructService()
         {
             InitializeComponent();
             this.ServiceName = ConfigurationManager.AppSettings.Get("ServiceName");

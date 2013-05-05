@@ -1,6 +1,6 @@
 ﻿namespace MetaConstructService
 {
-    partial class EventLoggerService
+    partial class MetaConstructService
     {
         /// <summary> 
         /// Required designer variable.

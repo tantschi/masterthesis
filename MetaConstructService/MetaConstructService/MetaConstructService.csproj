@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MathParserTK.cs" />
     <Compile Include="MetaConstructApp.cs" />
     <Compile Include="MetaConstructService.cs">
       <SubType>Component</SubType>

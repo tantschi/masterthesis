@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.eventLoggerProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
-            this.eventLoggerServiceInstaller = new System.ServiceProcess.ServiceInstaller();
+            this.MetaConstructProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
+            this.MetaConstructServiceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
             // eventLoggerProcessInstaller
             // 
-            this.eventLoggerProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
-            this.eventLoggerProcessInstaller.Password = null;
-            this.eventLoggerProcessInstaller.Username = null;
+            this.MetaConstructProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
+            this.MetaConstructProcessInstaller.Password = null;
+            this.MetaConstructProcessInstaller.Username = null;
             // 
             // eventLoggerServiceInstaller
             // 
-            this.eventLoggerServiceInstaller.ServiceName = "Service1";
+            this.MetaConstructServiceInstaller.ServiceName = "Service1";
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.eventLoggerProcessInstaller,
-            this.eventLoggerServiceInstaller});
+            this.MetaConstructProcessInstaller,
+            this.MetaConstructServiceInstaller});
 
         }
 
         #endregion
 
-        private System.ServiceProcess.ServiceProcessInstaller eventLoggerProcessInstaller;
-        private System.ServiceProcess.ServiceInstaller eventLoggerServiceInstaller;
+        private System.ServiceProcess.ServiceProcessInstaller MetaConstructProcessInstaller;
+        private System.ServiceProcess.ServiceInstaller MetaConstructServiceInstaller;
     }
 }

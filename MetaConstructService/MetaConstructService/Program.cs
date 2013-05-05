@@ -11,11 +11,9 @@ namespace MetaConstructService
         [DllImport("kernel32.dll")]
         public static extern Boolean AllocConsole();
 
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         static void Main(string[] args)
         {
+            // just for debugging
             if (args.Length > 0 && args[0].ToLower() == "/console")
             {
                 AllocConsole();
@@ -24,19 +22,19 @@ namespace MetaConstructService
                 app.Start();
 
                 string input = string.Empty;
-                Console.Write("Eventlogger Console started. Type 'exit' to stop the application: ");
+                Console.Write("Input 'exit' to stop application: ");
+               
+                // work until exit is inputed
+                while (input.ToLower() != "exit")
+                    input = Console.ReadLine();
 
-                // Wait for the user to exit the application                
-                while (input.ToLower() != "exit") input = Console.ReadLine();
-
-                // Stop the application.
                 app.Stop();
             }
             else
             {
                 // Initialize and run the service
                 ServiceBase[] ServicesToRun;
-                ServicesToRun = new ServiceBase[] { new EventLoggerService() };
+                ServicesToRun = new ServiceBase[] { new MetaConstructService() };
                 ServiceBase.Run(ServicesToRun);
             }
         }
