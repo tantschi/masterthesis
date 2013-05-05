@@ -54,10 +54,9 @@ namespace ReadCSV
             FileStream sensor = new FileStream(_localDest, FileMode.Append);
             using (StreamWriter sw = new StreamWriter(sensor))
             {
-                sw.WriteLine(strLine);
+                sw.WriteLine(DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss") + ";" + strLine);
                 sw.Close();
             }
-                
         }
 
         public void saveSubversion(String data, String commitmsg)
