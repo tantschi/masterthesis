@@ -12,6 +12,7 @@ namespace Simulation
     public partial class Link : Form
     {
         Form startingForm;
+        Dictionary<string, string> _sensor_dictionary;
 
         public Link(Form f)
         {
@@ -19,8 +20,9 @@ namespace Simulation
             startingForm = f;
 
             String link = "";
+            Dictionary<string, string> sensor_dictionary = new Dictionary<string, string>();
 
-            foreach (ListViewItem i in ((Form1)startingForm).lvdata.Items)
+            foreach (ListViewItem i in ((Start)startingForm).lvdata.Items)
             {
                 // Link each construct with + (= standard setting)
                 if (i.Checked == true)
@@ -30,15 +32,12 @@ namespace Simulation
                     else
                         link =  link + " + " + i.Text;
 
+                    sensor_dictionary.Add(i.Text, i.SubItems[2].Text);
                     i.Checked = false; // remove checked
                 }
             }
             tblink.Text = link;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            _sensor_dictionary = sensor_dictionary;
         }
 
         // add new link (= construct) to sensor system
@@ -53,12 +52,12 @@ namespace Simulation
             item.Text = tbadd.Text;
             item.SubItems.Add("Construct");
             item.SubItems.Add(tbdest.Text);
-            ((Form1)startingForm).lvdata.Items.Add(item);
+            ((Start)startingForm).lvdata.Items.Add(item);
 
             // start windows service
             MyService ms = new MyService();
             String servicename = "Simulation_" + tbadd.Text;
-            ms.installService(servicename, tbdest.Text, tblink.Text, tbseconds.Text);
+            ms.installService(servicename, tbdest.Text, tblink.Text, tbseconds.Text, _sensor_dictionary);
             ms.startService(servicename);
 
             this.Close();
@@ -71,6 +70,11 @@ namespace Simulation
             {
                 tbdest.Text = ofdselector.FileName;
             }
+        }
+
+        private void Link_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

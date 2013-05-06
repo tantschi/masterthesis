@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbvisual1 = new System.Windows.Forms.RadioButton();
             this.gbview = new System.Windows.Forms.GroupBox();
             this.btshow = new System.Windows.Forms.Button();
             this.btcancel = new System.Windows.Forms.Button();
@@ -42,47 +40,35 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbdest = new System.Windows.Forms.Label();
             this.tbdestination = new System.Windows.Forms.TextBox();
-            this.tintervall = new System.Windows.Forms.Timer(this.components);
+            this.btrefresh = new System.Windows.Forms.Button();
             this.gbview.SuspendLayout();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // rbvisual1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(136, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Visual Example 1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(21, 58);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(136, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Visual Example 2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbvisual1.AutoSize = true;
+            this.rbvisual1.Location = new System.Drawing.Point(21, 29);
+            this.rbvisual1.Name = "rbvisual1";
+            this.rbvisual1.Size = new System.Drawing.Size(148, 21);
+            this.rbvisual1.TabIndex = 0;
+            this.rbvisual1.TabStop = true;
+            this.rbvisual1.Text = "Coordinate System";
+            this.rbvisual1.UseVisualStyleBackColor = true;
             // 
             // gbview
             // 
-            this.gbview.Controls.Add(this.radioButton1);
-            this.gbview.Controls.Add(this.radioButton2);
+            this.gbview.Controls.Add(this.rbvisual1);
             this.gbview.Controls.Add(this.btshow);
-            this.gbview.Location = new System.Drawing.Point(490, 47);
+            this.gbview.Location = new System.Drawing.Point(490, 69);
             this.gbview.Name = "gbview";
-            this.gbview.Size = new System.Drawing.Size(214, 137);
+            this.gbview.Size = new System.Drawing.Size(214, 98);
             this.gbview.TabIndex = 2;
             this.gbview.TabStop = false;
             this.gbview.Text = "Visualize";
             // 
             // btshow
             // 
-            this.btshow.Location = new System.Drawing.Point(21, 95);
+            this.btshow.Location = new System.Drawing.Point(41, 58);
             this.btshow.Name = "btshow";
             this.btshow.Size = new System.Drawing.Size(75, 23);
             this.btshow.TabIndex = 3;
@@ -93,9 +79,9 @@
             // btcancel
             // 
             this.btcancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btcancel.Location = new System.Drawing.Point(560, 219);
+            this.btcancel.Location = new System.Drawing.Point(612, 219);
             this.btcancel.Name = "btcancel";
-            this.btcancel.Size = new System.Drawing.Size(75, 23);
+            this.btcancel.Size = new System.Drawing.Size(75, 27);
             this.btcancel.TabIndex = 4;
             this.btcancel.Text = "Cancel";
             this.btcancel.UseVisualStyleBackColor = true;
@@ -114,7 +100,7 @@
             this.chdata});
             this.lvdata.Location = new System.Drawing.Point(117, 75);
             this.lvdata.Name = "lvdata";
-            this.lvdata.Size = new System.Drawing.Size(340, 167);
+            this.lvdata.Size = new System.Drawing.Size(340, 208);
             this.lvdata.TabIndex = 6;
             this.lvdata.UseCompatibleStateImageBehavior = false;
             this.lvdata.View = System.Windows.Forms.View.Details;
@@ -162,19 +148,24 @@
             this.tbdestination.Name = "tbdestination";
             this.tbdestination.Size = new System.Drawing.Size(340, 22);
             this.tbdestination.TabIndex = 9;
-            this.tbdestination.TextChanged += new System.EventHandler(this.tbdestination_TextChanged);
             // 
-            // tintervall
+            // btrefresh
             // 
-            this.tintervall.Interval = 5000;
-            this.tintervall.Tick += new System.EventHandler(this.tintervall_Tick);
+            this.btrefresh.Location = new System.Drawing.Point(512, 219);
+            this.btrefresh.Name = "btrefresh";
+            this.btrefresh.Size = new System.Drawing.Size(75, 27);
+            this.btrefresh.TabIndex = 11;
+            this.btrefresh.Text = "Refresh";
+            this.btrefresh.UseVisualStyleBackColor = true;
+            this.btrefresh.Click += new System.EventHandler(this.btrefresh_Click);
             // 
             // Visual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btcancel;
-            this.ClientSize = new System.Drawing.Size(743, 276);
+            this.ClientSize = new System.Drawing.Size(736, 295);
+            this.Controls.Add(this.btrefresh);
             this.Controls.Add(this.lbdest);
             this.Controls.Add(this.tbdestination);
             this.Controls.Add(this.label1);
@@ -185,6 +176,7 @@
             this.Controls.Add(this.gbview);
             this.Name = "Visual";
             this.Text = "Visualization";
+            this.Load += new System.EventHandler(this.Visual_Load);
             this.gbview.ResumeLayout(false);
             this.gbview.PerformLayout();
             this.ResumeLayout(false);
@@ -194,19 +186,18 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbvisual1;
         private System.Windows.Forms.GroupBox gbview;
         private System.Windows.Forms.Button btshow;
         private System.Windows.Forms.Button btcancel;
-        private System.Windows.Forms.TextBox tbdesc;
-        private System.Windows.Forms.ListView lvdata;
+        public System.Windows.Forms.TextBox tbdesc;
         private System.Windows.Forms.Label lbdesc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbdest;
         private System.Windows.Forms.TextBox tbdestination;
-        private System.Windows.Forms.Timer tintervall;
         private System.Windows.Forms.ColumnHeader chdate;
         private System.Windows.Forms.ColumnHeader chdata;
+        public System.Windows.Forms.ListView lvdata;
+        private System.Windows.Forms.Button btrefresh;
     }
 }

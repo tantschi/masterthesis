@@ -60,7 +60,6 @@
             this.tbadd.Size = new System.Drawing.Size(372, 22);
             this.tbadd.TabIndex = 1;
             this.tbadd.Text = "New Construct";
-            this.tbadd.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbname
             // 
@@ -177,6 +176,7 @@
             this.Controls.Add(this.btadd);
             this.Name = "Link";
             this.Text = "Link";
+            this.Load += new System.EventHandler(this.Link_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

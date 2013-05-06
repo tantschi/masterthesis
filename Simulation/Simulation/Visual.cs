@@ -19,7 +19,7 @@ namespace Simulation
         {
             InitializeComponent();
             startingForm = f;
-            foreach (ListViewItem i in ((Form1)startingForm).lvdata.Items)
+            foreach (ListViewItem i in ((Start)startingForm).lvdata.Items)
             {
                 if (i.Checked == true)
                 {
@@ -27,46 +27,49 @@ namespace Simulation
                     tbdestination.Text = i.SubItems[2].Text;
                 }
             }
-            tintervall.Start();
+            ReadfromFile(tbdestination.Text);
         }
 
+        // open visualization
         private void btshow_Click(object sender, EventArgs e)
         {
-
+            if (rbvisual1.Checked == true)
+            {
+                Graph mygraph = new Graph(this);
+                mygraph.ShowDialog();
+            }
         }
 
-        private void tbdestination_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // read subversion file
         private void ReadfromFile(String dest)
         {
             String text;
-            ListViewItem item = new ListViewItem();
-            using (StreamReader sw = new StreamReader(dest))
+            lvdata.Items.Clear();
+            
+            using (StreamReader sr = new StreamReader(dest))
             {
-                text = sw.ReadLine();
-                item.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
-                item.SubItems.Add(text);
-                lvdata.Items.Add(item);
-                sw.Close();
+                while (sr.Peek() >= 0)
+                {
+                    text = sr.ReadLine();
+                    String[] split = text.Split(';');
+                    ListViewItem item = new ListViewItem();
+                    item.Text = split[0];
+                    item.SubItems.Add(split[1]);
+                    lvdata.Items.Add(item);
+                }
+                sr.Close();
             }
-
         }
 
-
-        private void tintervall_Tick(object sender, EventArgs e)
+        // refresh view
+        private void btrefresh_Click(object sender, EventArgs e)
         {
-            //superversion update
-            // read from file
             ReadfromFile(tbdestination.Text);
-
-
         }
 
+        private void Visual_Load(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

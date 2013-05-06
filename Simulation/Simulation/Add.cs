@@ -32,7 +32,7 @@ namespace Simulation
             item.Text = tbdescription.Text;
             item.SubItems.Add("Sensor");
             item.SubItems.Add(tblocaldest.Text);
-            ((Form1)startingForm).lvdata.Items.Add(item);
+            ((Start)startingForm).lvdata.Items.Add(item);
             this.Close();
         }
     }

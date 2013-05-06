@@ -5,7 +5,6 @@ D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulatio
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.exe
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.pdb
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Add.resources
-D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Form1.resources
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Link.resources
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Visual.resources
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\GitSharp.dll
@@ -27,3 +26,18 @@ D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulatio
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\SharpSvn-SASL21-23-Win32.dll
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\SharpPlink-Win32.svnExe
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.csprojResolveAssemblyReference.cache
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\ZedGraph.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\ZedGraph.xml
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\de\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\es\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\fr\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\hu\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\it\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\ja\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\pt\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\sv\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\tr\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Graph.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Start.resources
