@@ -20,13 +20,21 @@ namespace Simulation
             startingForm = f;
         }
 
-        private void btcancel_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btadd_Click(object sender, EventArgs e)
         {
+
+            foreach (ListViewItem i in ((Start)startingForm).lvdata.Items)
+            {
+                // Name of sensor has to be unique!
+                if (i.Text == tbdescription.Text)
+                {
+                    MessageBox.Show("Please give the sensor a unique name!");
+                    tbdescription.Focus();
+                    return;
+                }
+            } 
+            
+            // Add sensor to list
             ListViewItem item = new ListViewItem();
             item.Checked = false;
             item.Text = tbdescription.Text;
@@ -35,5 +43,14 @@ namespace Simulation
             ((Start)startingForm).lvdata.Items.Add(item);
             this.Close();
         }
+
+        private void btbrowse_Click_1(object sender, EventArgs e)
+        {
+            if (ofdselector.ShowDialog() == DialogResult.OK)
+            {
+                tblocaldest.Text = ofdselector.FileName;
+            }
+        }
+
     }
 }
