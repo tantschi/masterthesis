@@ -8,6 +8,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Configuration;
 
+// Quelle: http://www.codeproject.com/Articles/3990/Simple-Windows-Service-Sample
 namespace MetaConstructService
 {
     public partial class MetaConstructService : ServiceBase

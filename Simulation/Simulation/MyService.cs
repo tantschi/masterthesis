@@ -12,6 +12,20 @@ namespace Simulation
 {
     class MyService
     {
+        // member deklaration
+        private string _repo;
+        private string _install;
+        private string _uninstall;
+        private string _config;
+
+        public MyService(string repo, string install, string uninstall, string config)
+        {
+            _repo = repo;
+            _install = install;
+            _uninstall = uninstall;
+            _config = config;
+        }
+
         // install and start Service
         public void startService(String serviceName)
         {
@@ -56,7 +70,7 @@ namespace Simulation
         }
 
         // install Service
-        public void installService(String service, String destination, String commit, String intervall, Dictionary<string, string> data)
+        public void installService(String service, String destination, String commit, String intervall, Dictionary<string, string> data, String vcs)
         {
             AddConfigurationValue("ServiceName", service);
             AddConfigurationValue("Destination", destination);
@@ -70,7 +84,7 @@ namespace Simulation
             }
 
             Process p = new Process();
-            p.StartInfo.FileName = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\C#Workspace\\MetaConstructService\\MetaConstructService\\bin\\Debug\\Install.cmd";
+            p.StartInfo.FileName = _install;
             p.Start();
             p.WaitForExit();
         }
@@ -80,14 +94,14 @@ namespace Simulation
         {
             AddConfigurationValue("ServiceName", value);
             Process p = new Process();
-            p.StartInfo.FileName = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\C#Workspace\\MetaConstructService\\MetaConstructService\\bin\\Debug\\Uninstall.cmd";
+            p.StartInfo.FileName = _uninstall;
             p.Start();
         }
 
         // Delete configuration for Service
         private void DeleteConfigurationValue()
         {
-            Configuration configuration = ConfigurationManager.OpenExeConfiguration("D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\C#Workspace\\MetaConstructService\\MetaConstructService\\bin\\Debug\\MetaConstructService.exe"); 
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(_config); 
 
             foreach (String key in configuration.AppSettings.Settings.AllKeys)
             {
@@ -104,7 +118,7 @@ namespace Simulation
         // Add configuration for Service
         private void AddConfigurationValue(String key, String value)
         {
-            Configuration configuration = ConfigurationManager.OpenExeConfiguration("D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\C#Workspace\\MetaConstructService\\MetaConstructService\\bin\\Debug\\MetaConstructService.exe");
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(_config);
             foreach (String loopkey in configuration.AppSettings.Settings.AllKeys)
             {
                 if (loopkey.Contains(key))

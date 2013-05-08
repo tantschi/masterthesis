@@ -55,9 +55,11 @@ namespace Simulation
             ((Start)startingForm).lvdata.Items.Add(item);
 
             // start windows service
-            MyService ms = new MyService();
+            MyService ms = new MyService(((Start)startingForm).repo, ((Start)startingForm).install,
+                ((Start)startingForm).uninstall, ((Start)startingForm).config);
+
             String servicename = "Simulation_" + tbadd.Text;
-            ms.installService(servicename, tbdest.Text, tblink.Text, tbseconds.Text, _sensor_dictionary);
+            ms.installService(servicename, tbdest.Text, tblink.Text, tbseconds.Text, _sensor_dictionary, ((Start)startingForm).lbvcs.Text);
             ms.startService(servicename);
 
             this.Close();
