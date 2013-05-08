@@ -1,0 +1,5 @@
+E:\ImportanceData\NonbootHDD\Work\CSharp\zOther\MathParser.NET\Builds\Release\TestMathParserTK.dll
+E:\ImportanceData\NonbootHDD\Work\CSharp\zOther\MathParser.NET\Builds\Release\TestMathParserTK.pdb
+E:\ImportanceData\NonbootHDD\Work\CSharp\zOther\MathParser.NET\MathParserTK\TestMathParserTK\obj\Release\TestMathParserTK.csprojResolveAssemblyReference.cache
+E:\ImportanceData\NonbootHDD\Work\CSharp\zOther\MathParser.NET\MathParserTK\TestMathParserTK\obj\Release\TestMathParserTK.dll
+E:\ImportanceData\NonbootHDD\Work\CSharp\zOther\MathParser.NET\MathParserTK\TestMathParserTK\obj\Release\TestMathParserTK.pdb
