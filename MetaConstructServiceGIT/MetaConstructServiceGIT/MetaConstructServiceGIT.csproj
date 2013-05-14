@@ -52,6 +52,10 @@
     <Reference Include="GitSharp">
       <HintPath>..\..\..\GIT\GitSharp-0.3.0.056f5345c8835fabc1a8f90548a9c5b0abdf9a68-release-net-3.5\GitSharp.dll</HintPath>
     </Reference>
+    <Reference Include="GitSharp.Core, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\GIT\GitSharp-0.3.0.056f5345c8835fabc1a8f90548a9c5b0abdf9a68-release-net-3.5\GitSharp.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Configuration.Install" />
