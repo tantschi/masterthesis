@@ -7,27 +7,63 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections.Specialized;
 
 namespace Simulation
 {
     public partial class Visual : Form
     {
 
-        Form startingForm;
+        Form _startingForm;
+        NameValueCollection _col;
 
         public Visual(Form f)
         {
             InitializeComponent();
-            startingForm = f;
-            foreach (ListViewItem i in ((Start)startingForm).lvdata.Items)
+            _startingForm = f;
+
+            _col = check_amount();
+
+            if (_col.Count == 1)
+            {
+                tbdesc.Text = _col.Keys[0];
+                tbdestination.Text = _col[_col.Keys[0]];                
+                ReadfromFile(tbdestination.Text);
+            }
+            else
+            {
+                for (int i = 0; i < _col.Count; i++)
+                {
+                    if (tbdesc.Text == "")
+                    {
+                        tbdesc.Text = _col.Keys[i];
+                    }
+                    else
+                    {
+                        tbdesc.Text = tbdesc.Text + ", " + _col.Keys[i];
+                        tbdestination.Text = "More than one sensor selected - no data displayed";
+                    }
+                }
+            }
+        }
+
+        // count amount of checked data
+        private NameValueCollection check_amount()
+        {
+            Int16 count = 0;
+
+            NameValueCollection col = new NameValueCollection();
+
+            foreach (ListViewItem i in ((Start)_startingForm).lvdata.Items)
             {
                 if (i.Checked == true)
                 {
-                    tbdesc.Text = i.Text;
-                    tbdestination.Text = i.SubItems[2].Text;
+                    col.Add(i.Text, i.SubItems[2].Text);
+                    count++;
                 }
             }
-            ReadfromFile(tbdestination.Text);
+
+            return col;
         }
 
         // open visualization
@@ -35,7 +71,17 @@ namespace Simulation
         {
             if (rbvisual1.Checked == true)
             {
-                Graph mygraph = new Graph(this);
+                Graph mygraph = new Graph(this, _col, "curve");
+                mygraph.ShowDialog();
+            }
+            else if (rbpiechart.Checked == true)
+            {
+                Graph mygraph = new Graph(this, _col, "pie");
+                mygraph.ShowDialog();
+            }
+            else if (rbbars.Checked == true)
+            {
+                Graph mygraph = new Graph(this, _col, "bar");
                 mygraph.ShowDialog();
             }
         }

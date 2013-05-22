@@ -58,8 +58,8 @@ namespace Simulation
             MyService ms = new MyService(((Start)startingForm).repo, ((Start)startingForm).install,
                 ((Start)startingForm).uninstall, ((Start)startingForm).config);
 
-            String servicename = "Simulation_" + tbadd.Text;
-            ms.installService(servicename, tbdest.Text, tblink.Text, tbseconds.Text, _sensor_dictionary, ((Start)startingForm).lbvcs.Text);
+            String servicename = "Simulation" + ((Start)startingForm).lbvcs.Text + "_" + tbadd.Text;
+            ms.installService(servicename, tbdest.Text, tblink.Text, tbseconds.Text, _sensor_dictionary);
             ms.startService(servicename);
 
             this.Close();

@@ -70,12 +70,13 @@ namespace Simulation
         }
 
         // install Service
-        public void installService(String service, String destination, String commit, String intervall, Dictionary<string, string> data, String vcs)
+        public void installService(String service, String destination, String commit, String intervall, Dictionary<string, string> data)
         {
             AddConfigurationValue("ServiceName", service);
             AddConfigurationValue("Destination", destination);
             AddConfigurationValue("CommitMsg", commit);
             AddConfigurationValue("Intervall", intervall);
+            AddConfigurationValue("Repository", _repo);
 
             DeleteConfigurationValue();
             foreach (KeyValuePair<string, string> kvp in data)

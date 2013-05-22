@@ -41,6 +41,8 @@
             this.lbdest = new System.Windows.Forms.Label();
             this.tbdestination = new System.Windows.Forms.TextBox();
             this.btrefresh = new System.Windows.Forms.Button();
+            this.rbpiechart = new System.Windows.Forms.RadioButton();
+            this.rbbars = new System.Windows.Forms.RadioButton();
             this.gbview.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,26 +51,28 @@
             this.rbvisual1.AutoSize = true;
             this.rbvisual1.Location = new System.Drawing.Point(21, 29);
             this.rbvisual1.Name = "rbvisual1";
-            this.rbvisual1.Size = new System.Drawing.Size(148, 21);
+            this.rbvisual1.Size = new System.Drawing.Size(66, 21);
             this.rbvisual1.TabIndex = 0;
             this.rbvisual1.TabStop = true;
-            this.rbvisual1.Text = "Coordinate System";
+            this.rbvisual1.Text = "Curve";
             this.rbvisual1.UseVisualStyleBackColor = true;
             // 
             // gbview
             // 
+            this.gbview.Controls.Add(this.rbbars);
+            this.gbview.Controls.Add(this.rbpiechart);
             this.gbview.Controls.Add(this.rbvisual1);
             this.gbview.Controls.Add(this.btshow);
-            this.gbview.Location = new System.Drawing.Point(490, 69);
+            this.gbview.Location = new System.Drawing.Point(490, 84);
             this.gbview.Name = "gbview";
-            this.gbview.Size = new System.Drawing.Size(214, 98);
+            this.gbview.Size = new System.Drawing.Size(214, 148);
             this.gbview.TabIndex = 2;
             this.gbview.TabStop = false;
             this.gbview.Text = "Visualize";
             // 
             // btshow
             // 
-            this.btshow.Location = new System.Drawing.Point(41, 58);
+            this.btshow.Location = new System.Drawing.Point(67, 115);
             this.btshow.Name = "btshow";
             this.btshow.Size = new System.Drawing.Size(75, 23);
             this.btshow.TabIndex = 3;
@@ -79,7 +83,7 @@
             // btcancel
             // 
             this.btcancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btcancel.Location = new System.Drawing.Point(612, 219);
+            this.btcancel.Location = new System.Drawing.Point(612, 247);
             this.btcancel.Name = "btcancel";
             this.btcancel.Size = new System.Drawing.Size(75, 27);
             this.btcancel.TabIndex = 4;
@@ -151,13 +155,35 @@
             // 
             // btrefresh
             // 
-            this.btrefresh.Location = new System.Drawing.Point(512, 219);
+            this.btrefresh.Location = new System.Drawing.Point(512, 247);
             this.btrefresh.Name = "btrefresh";
             this.btrefresh.Size = new System.Drawing.Size(75, 27);
             this.btrefresh.TabIndex = 11;
             this.btrefresh.Text = "Refresh";
             this.btrefresh.UseVisualStyleBackColor = true;
             this.btrefresh.Click += new System.EventHandler(this.btrefresh_Click);
+            // 
+            // rbpiechart
+            // 
+            this.rbpiechart.AutoSize = true;
+            this.rbpiechart.Location = new System.Drawing.Point(21, 56);
+            this.rbpiechart.Name = "rbpiechart";
+            this.rbpiechart.Size = new System.Drawing.Size(87, 21);
+            this.rbpiechart.TabIndex = 4;
+            this.rbpiechart.TabStop = true;
+            this.rbpiechart.Text = "Pie Chart";
+            this.rbpiechart.UseVisualStyleBackColor = true;
+            // 
+            // rbbars
+            // 
+            this.rbbars.AutoSize = true;
+            this.rbbars.Location = new System.Drawing.Point(21, 83);
+            this.rbbars.Name = "rbbars";
+            this.rbbars.Size = new System.Drawing.Size(58, 21);
+            this.rbbars.TabIndex = 5;
+            this.rbbars.TabStop = true;
+            this.rbbars.Text = "Bars";
+            this.rbbars.UseVisualStyleBackColor = true;
             // 
             // Visual
             // 
@@ -199,5 +225,7 @@
         private System.Windows.Forms.ColumnHeader chdata;
         public System.Windows.Forms.ListView lvdata;
         private System.Windows.Forms.Button btrefresh;
+        private System.Windows.Forms.RadioButton rbbars;
+        private System.Windows.Forms.RadioButton rbpiechart;
     }
 }

@@ -54,7 +54,7 @@
             this.ClientSize = new System.Drawing.Size(679, 464);
             this.Controls.Add(this.zedGraphControl1);
             this.Name = "Graph";
-            this.Text = "Graph";
+            this.Text = "Curve";
             this.Load += new System.EventHandler(this.Graph_Load);
             this.Resize += new System.EventHandler(this.Graph_Resize);
             this.ResumeLayout(false);

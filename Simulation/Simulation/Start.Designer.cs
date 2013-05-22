@@ -28,21 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Humidity",
-            "Sensor",
-            "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\codegoogle_thesis_svn\\humi" +
-                "dity.txt"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Temperature",
-            "Sensor",
-            "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\codegoogle_thesis_svn\\temp" +
-                "erature.txt"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Air Pressure",
-            "Sensor",
-            "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\codegoogle_thesis_svn\\airp" +
-                "ressure.txt"}, -1);
             this.lvdata = new System.Windows.Forms.ListView();
             this.chdecription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chtype = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -65,20 +50,13 @@
             this.chdecription,
             this.chtype,
             this.chorig});
-            listViewItem4.StateImageIndex = 0;
-            listViewItem4.Tag = "";
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.StateImageIndex = 0;
-            this.lvdata.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
             this.lvdata.Location = new System.Drawing.Point(21, 31);
             this.lvdata.Name = "lvdata";
             this.lvdata.Size = new System.Drawing.Size(559, 293);
             this.lvdata.TabIndex = 0;
             this.lvdata.UseCompatibleStateImageBehavior = false;
             this.lvdata.View = System.Windows.Forms.View.Details;
+            this.lvdata.SelectedIndexChanged += new System.EventHandler(this.lvdata_SelectedIndexChanged);
             // 
             // chdecription
             // 
@@ -190,6 +168,7 @@
             this.Controls.Add(this.btadd);
             this.Name = "Start";
             this.Text = "Geo Sensor Network";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Start_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
