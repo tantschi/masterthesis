@@ -40,6 +40,7 @@
             this.btlink = new System.Windows.Forms.Button();
             this.btsettings = new System.Windows.Forms.Button();
             this.lbvcs = new System.Windows.Forms.Label();
+            this.btedit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,12 +67,12 @@
             // chtype
             // 
             this.chtype.Text = "Type";
-            this.chtype.Width = 70;
+            this.chtype.Width = 115;
             // 
             // chorig
             // 
             this.chorig.Text = "Destination";
-            this.chorig.Width = 325;
+            this.chorig.Width = 280;
             // 
             // groupBox1
             // 
@@ -85,7 +86,7 @@
             // 
             // btadd
             // 
-            this.btadd.Location = new System.Drawing.Point(656, 106);
+            this.btadd.Location = new System.Drawing.Point(656, 103);
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(103, 23);
             this.btadd.TabIndex = 1;
@@ -95,7 +96,7 @@
             // 
             // btdelete
             // 
-            this.btdelete.Location = new System.Drawing.Point(656, 142);
+            this.btdelete.Location = new System.Drawing.Point(656, 171);
             this.btdelete.Name = "btdelete";
             this.btdelete.Size = new System.Drawing.Size(103, 23);
             this.btdelete.TabIndex = 2;
@@ -105,7 +106,7 @@
             // 
             // btvisual
             // 
-            this.btvisual.Location = new System.Drawing.Point(656, 214);
+            this.btvisual.Location = new System.Drawing.Point(656, 239);
             this.btvisual.Name = "btvisual";
             this.btvisual.Size = new System.Drawing.Size(103, 23);
             this.btvisual.TabIndex = 3;
@@ -115,7 +116,7 @@
             // 
             // btclose
             // 
-            this.btclose.Location = new System.Drawing.Point(656, 286);
+            this.btclose.Location = new System.Drawing.Point(656, 307);
             this.btclose.Name = "btclose";
             this.btclose.Size = new System.Drawing.Size(103, 23);
             this.btclose.TabIndex = 4;
@@ -125,7 +126,7 @@
             // 
             // btlink
             // 
-            this.btlink.Location = new System.Drawing.Point(656, 178);
+            this.btlink.Location = new System.Drawing.Point(656, 205);
             this.btlink.Name = "btlink";
             this.btlink.Size = new System.Drawing.Size(103, 23);
             this.btlink.TabIndex = 5;
@@ -135,7 +136,7 @@
             // 
             // btsettings
             // 
-            this.btsettings.Location = new System.Drawing.Point(656, 250);
+            this.btsettings.Location = new System.Drawing.Point(656, 273);
             this.btsettings.Name = "btsettings";
             this.btsettings.Size = new System.Drawing.Size(103, 23);
             this.btsettings.TabIndex = 6;
@@ -153,11 +154,22 @@
             this.lbvcs.TabIndex = 7;
             this.lbvcs.Text = "SVN";
             // 
+            // btedit
+            // 
+            this.btedit.Location = new System.Drawing.Point(656, 137);
+            this.btedit.Name = "btedit";
+            this.btedit.Size = new System.Drawing.Size(103, 23);
+            this.btedit.TabIndex = 8;
+            this.btedit.Text = "Edit";
+            this.btedit.UseVisualStyleBackColor = true;
+            this.btedit.Click += new System.EventHandler(this.btedit_Click);
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 384);
+            this.Controls.Add(this.btedit);
             this.Controls.Add(this.lbvcs);
             this.Controls.Add(this.btsettings);
             this.Controls.Add(this.btlink);
@@ -190,6 +202,7 @@
         private System.Windows.Forms.ColumnHeader chtype;
         private System.Windows.Forms.Button btsettings;
         public System.Windows.Forms.Label lbvcs;
+        private System.Windows.Forms.Button btedit;
     }
 }
 

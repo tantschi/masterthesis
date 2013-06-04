@@ -47,7 +47,7 @@ namespace Simulation
             DeleteConfigurationValue();
             foreach (ListViewItem i in lvdata.Items)
             {
-                if (i.SubItems[1].Text == "Sensor")
+                if (i.SubItems[1].Text.Contains("Sensor"))
                 {
                     AddConfigurationValue("Config_Sensor_" + i.Text, i.SubItems[2].Text);
 
@@ -207,6 +207,33 @@ namespace Simulation
         private void Start_FormClosing(object sender, FormClosingEventArgs e)
         {
             save_settings();
+        }
+
+        private void btedit_Click(object sender, EventArgs e)
+        {
+            if (lvdata.CheckedItems.Count != 1)
+            {
+                MessageBox.Show("Please select one item to edit!");
+                return;
+            }
+
+            foreach (ListViewItem i in lvdata.Items)
+            {
+                if (i.Checked == true)
+                {
+                    if (i.SubItems[2].Text.Contains("Construct"))
+                    {
+                        MessageBox.Show("Only Sensors can be edited!");
+                        return;
+                    }
+
+                    // open new dialog
+                    Edit editFrm = new Edit(this, i.SubItems[2].Text, i.Text);
+                    editFrm.ShowDialog();
+                    break;
+                }
+            }
+
         }
     }
 }

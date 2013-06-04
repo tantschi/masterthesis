@@ -279,5 +279,10 @@ namespace Simulation
             zedGraphControl1.Size = new Size(ClientRectangle.Width - 20,
                                     ClientRectangle.Height - 20);
         }
+
+        private void zedGraphControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

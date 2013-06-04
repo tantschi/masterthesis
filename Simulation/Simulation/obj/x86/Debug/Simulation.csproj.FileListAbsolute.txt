@@ -42,3 +42,6 @@ D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulatio
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Graph.resources
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Start.resources
 D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Settings.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Save.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Load.resources
+D:\04_Semester\Masterarbeit_Hawaii_Stuff\Praxis\C#Workspace\Simulation\Simulation\obj\x86\Debug\Simulation.Edit.resources

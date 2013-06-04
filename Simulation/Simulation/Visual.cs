@@ -69,6 +69,20 @@ namespace Simulation
         // open visualization
         private void btshow_Click(object sender, EventArgs e)
         {
+            _col = check_amount();
+
+            if (tbdestination.Text == "Loading Failure - please try again!")
+            {
+                MessageBox.Show("Loading Failure - Please check input values!");
+                return;
+            }
+
+            if (_col.Count == 0)
+            {
+                MessageBox.Show("No item selected!");
+                return;
+            }
+
             if (rbvisual1.Checked == true)
             {
                 Graph mygraph = new Graph(this, _col, "curve");
@@ -86,10 +100,10 @@ namespace Simulation
             }
         }
 
-        // read subversion file
+        // read file
         private void ReadfromFile(String dest)
         {
-            String text;
+            String text = "";
             lvdata.Items.Clear();
             
             using (StreamReader sr = new StreamReader(dest))
@@ -110,10 +124,47 @@ namespace Simulation
         // refresh view
         private void btrefresh_Click(object sender, EventArgs e)
         {
-            ReadfromFile(tbdestination.Text);
+            if (tbdestination.Text != "More than one sensor selected - no data displayed" &&
+                tbdestination.Text != "Loading Failure - please try again!")
+            {
+                ReadfromFile(tbdestination.Text);
+            }
         }
 
         private void Visual_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btsave_Click(object sender, EventArgs e)
+        {
+            // open new dialog
+            _col = check_amount();
+            Save saveFrm = new Save(tbdesc.Text, _col, _startingForm);
+            saveFrm.ShowDialog();
+        }
+
+        private void btload_Click(object sender, EventArgs e)
+        {
+            // open new dialog
+            Load loadFrm = new Load(_startingForm, this);
+            loadFrm.ShowDialog();
+            btrefresh_Click(sender, e);
+
+            //tbdestination.Text
+        }
+
+        private void tbdestination_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvdata_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btcancel_Click(object sender, EventArgs e)
         {
 
         }
