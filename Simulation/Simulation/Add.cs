@@ -28,7 +28,7 @@ namespace Simulation
                 // Name of sensor has to be unique!
                 if (i.Text == tbdescription.Text)
                 {
-                    MessageBox.Show("Please give the sensor a unique name!");
+                    MessageBox.Show("Please give the sensor a unique name!", "Name sensor", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     tbdescription.Focus();
                     return;
                 }

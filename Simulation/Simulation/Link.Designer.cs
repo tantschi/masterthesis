@@ -45,7 +45,7 @@
             // 
             // btadd
             // 
-            this.btadd.Location = new System.Drawing.Point(193, 188);
+            this.btadd.Location = new System.Drawing.Point(193, 192);
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(75, 23);
             this.btadd.TabIndex = 0;
@@ -80,7 +80,7 @@
             // btcancel
             // 
             this.btcancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btcancel.Location = new System.Drawing.Point(295, 188);
+            this.btcancel.Location = new System.Drawing.Point(295, 192);
             this.btcancel.Name = "btcancel";
             this.btcancel.Size = new System.Drawing.Size(75, 23);
             this.btcancel.TabIndex = 4;
@@ -161,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btcancel;
-            this.ClientSize = new System.Drawing.Size(609, 280);
+            this.ClientSize = new System.Drawing.Size(572, 240);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbseconds);

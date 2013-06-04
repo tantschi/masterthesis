@@ -73,13 +73,13 @@ namespace Simulation
 
             if (tbdestination.Text == "Loading Failure - please try again!")
             {
-                MessageBox.Show("Loading Failure - Please check input values!");
+                MessageBox.Show("Loading Failure - Please check input values!", "Wrong values", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             if (_col.Count == 0)
             {
-                MessageBox.Show("No item selected!");
+                MessageBox.Show("No item selected!", "Select item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -131,11 +131,6 @@ namespace Simulation
             }
         }
 
-        private void Visual_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btsave_Click(object sender, EventArgs e)
         {
             // open new dialog
@@ -152,21 +147,6 @@ namespace Simulation
             btrefresh_Click(sender, e);
 
             //tbdestination.Text
-        }
-
-        private void tbdestination_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lvdata_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btcancel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

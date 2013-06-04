@@ -14,6 +14,8 @@ namespace Simulation
 {
     public partial class Start : Form
     {
+
+        // store default values
         string _config = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\C#Workspace\\Simulation\\Simulation\\bin\\Debug\\Simulation.exe";
         public string repo = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\Github\\codegoogle_thesis_svn"; 
         public string install = "D:\\04_Semester\\Masterarbeit_Hawaii_Stuff\\Praxis\\C#Workspace\\MetaConstructService\\MetaConstructService\\bin\\Debug\\Install.cmd";
@@ -29,6 +31,7 @@ namespace Simulation
         // ad a new sensor
         private void btadd_Click(object sender, EventArgs e)
         {
+            // open new dialoge
             Add addFrm = new Add(this);
             addFrm.ShowDialog();
         }
@@ -40,11 +43,13 @@ namespace Simulation
             Application.Exit();
         }
 
-        // save settings
+        // save settings for next restart
         private void save_settings()
         {
             // delete old data
             DeleteConfigurationValue();
+
+            // store settings in configuration file
             foreach (ListViewItem i in lvdata.Items)
             {
                 if (i.SubItems[1].Text.Contains("Sensor"))
@@ -63,6 +68,8 @@ namespace Simulation
         private void AddConfigurationValue(String key, String value)
         {
             Configuration config = ConfigurationManager.OpenExeConfiguration(_config);
+
+            // check if key already exists
             foreach (String loopkey in config.AppSettings.Settings.AllKeys)
             {
                 if (loopkey.Contains(key))
@@ -93,7 +100,7 @@ namespace Simulation
             ConfigurationManager.RefreshSection("appSettings");
         }
 
-        // load configuration
+        // load configuration (on startup)
         private void LoadConfigurationValue()
         {            
             NameValueCollection col = ConfigurationManager.AppSettings;
@@ -124,6 +131,7 @@ namespace Simulation
             }
         }
 
+        // check if at least one list view item is checked
         private bool controlchecked()
         {
             bool ischecked = false;
@@ -137,7 +145,6 @@ namespace Simulation
             }
 
             return ischecked;
-
         }
 
         // link sensors or constructs
@@ -146,7 +153,7 @@ namespace Simulation
             bool ischecked = controlchecked();
             if (ischecked == false)
             {
-                MessageBox.Show("Please check an sensor or construct for linking!");
+                MessageBox.Show("Please check an sensor or construct for linking!", "Check item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
           
@@ -161,17 +168,13 @@ namespace Simulation
             bool ischecked = controlchecked();
             if (ischecked == false)
             {
-                MessageBox.Show("Please check at least one sensor or construct to show!");
+                MessageBox.Show("Please check at least one sensor or construct to show!", "Check item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
-            } 
-            
+            }
+
+            // open new dialoge
             Visual linkFrm = new Visual(this);
             linkFrm.ShowDialog();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         // delete checked constructs or sensors
@@ -181,17 +184,18 @@ namespace Simulation
             {
                 if (i.Checked == true)
                 {
+                    // if a construct is deleted, the windows service has to be stopped too!
                     if (i.SubItems[1].Text == "Construct")
                     {
                         MyService ms = new MyService(repo, install, uninstall, config);
                         ms.stopService("Simulation" + lbvcs.Text + "_" + i.SubItems[0].Text);
                     }
-
                     i.Remove();
                 }
             }
         }
 
+        // change settings of system (selected VCS)
         private void btsettings_Click(object sender, EventArgs e)
         {
             // open new dialog
@@ -199,21 +203,18 @@ namespace Simulation
             settingsFrm.ShowDialog();
         }
 
-        private void lvdata_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // store settings if form is closed
         private void Start_FormClosing(object sender, FormClosingEventArgs e)
         {
             save_settings();
         }
 
+        // edit a sensor (description or path)
         private void btedit_Click(object sender, EventArgs e)
         {
             if (lvdata.CheckedItems.Count != 1)
             {
-                MessageBox.Show("Please select one item to edit!");
+                MessageBox.Show("Please select one item to edit!", "Check only one item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -221,9 +222,11 @@ namespace Simulation
             {
                 if (i.Checked == true)
                 {
+                    // It is not allowed to edit constructs, because 
+                    // of the windows service in the background
                     if (i.SubItems[2].Text.Contains("Construct"))
                     {
-                        MessageBox.Show("Only Sensors can be edited!");
+                        MessageBox.Show("Only Sensors (not constructs) can be edited!", "Check a sensor", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
                     }
 
@@ -233,7 +236,6 @@ namespace Simulation
                     break;
                 }
             }
-
         }
     }
 }

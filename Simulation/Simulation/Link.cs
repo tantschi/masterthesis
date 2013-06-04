@@ -44,7 +44,9 @@ namespace Simulation
         private void btadd_Click(object sender, EventArgs e)
         {
             if (tbdest.Text == "" || tbadd.Text == "" || tblink.Text == "")
-                MessageBox.Show("Please enter information in every field!");
+            {
+                MessageBox.Show("Please insert information in every field!", "Values missing", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             
             // add new construct to sensor list
             ListViewItem item = new ListViewItem();

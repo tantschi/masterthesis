@@ -113,7 +113,6 @@
             this.btcancel.TabIndex = 4;
             this.btcancel.Text = "Cancel";
             this.btcancel.UseVisualStyleBackColor = true;
-            this.btcancel.Click += new System.EventHandler(this.btcancel_Click);
             // 
             // tbdesc
             // 
@@ -133,7 +132,6 @@
             this.lvdata.TabIndex = 6;
             this.lvdata.UseCompatibleStateImageBehavior = false;
             this.lvdata.View = System.Windows.Forms.View.Details;
-            this.lvdata.SelectedIndexChanged += new System.EventHandler(this.lvdata_SelectedIndexChanged);
             // 
             // chdate
             // 
@@ -178,7 +176,6 @@
             this.tbdestination.Name = "tbdestination";
             this.tbdestination.Size = new System.Drawing.Size(340, 22);
             this.tbdestination.TabIndex = 9;
-            this.tbdestination.TextChanged += new System.EventHandler(this.tbdestination_TextChanged);
             // 
             // btrefresh
             // 
@@ -229,7 +226,6 @@
             this.Controls.Add(this.gbview);
             this.Name = "Visual";
             this.Text = "Visualization";
-            this.Load += new System.EventHandler(this.Visual_Load);
             this.gbview.ResumeLayout(false);
             this.gbview.PerformLayout();
             this.ResumeLayout(false);

@@ -57,7 +57,6 @@
             this.lvdata.TabIndex = 0;
             this.lvdata.UseCompatibleStateImageBehavior = false;
             this.lvdata.View = System.Windows.Forms.View.Details;
-            this.lvdata.SelectedIndexChanged += new System.EventHandler(this.lvdata_SelectedIndexChanged);
             // 
             // chdecription
             // 
@@ -181,7 +180,6 @@
             this.Name = "Start";
             this.Text = "Geo Sensor Network";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Start_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
